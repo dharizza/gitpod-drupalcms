@@ -7,11 +7,11 @@ tasks:
   - name: ddev
     init: |
       sudo cp .gitpod/gitpod-setup-ddev.sh /usr/local/bin/.
-      cd project && ddev pull
-      ./setup.sh
+      cd cms
+      ./launch-drupal-cms.sh
     command: |
-      cd project && ddev start
-      echo "System is ready. Run ddev status to get the URL for the Drupal site."
+      cd cms && ddev start
+      echo "System is ready. Run ddev status to get the URL for the Drupal CMS site."
       ddev status
 
 # Set the following ports public
