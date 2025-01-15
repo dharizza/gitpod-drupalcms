@@ -9,6 +9,7 @@ tasks:
       sudo cp .gitpod/gitpod-setup-ddev.sh /usr/local/bin/.
       cd cms
       ./launch-drupal-cms.sh
+      ddev composer install && ddev start
     command: |
       cd cms && ddev start
       echo "System is ready. Run ddev status to get the URL for the Drupal CMS site."
